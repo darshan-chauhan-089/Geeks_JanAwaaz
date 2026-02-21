@@ -1,0 +1,18 @@
+{
+  "name": "janawaan",
+  "version": "1.0.0",
+  "description": "JanAwaaz — AI-powered civic issue verification platform (monorepo root)",
+  "private": true,
+  "scripts": {
+    "dev": "concurrently -n BACKEND,FRONTEND -c cyan,magenta \"npm run dev --prefix backend\" \"npm run dev --prefix frontend\"",
+    "dev:backend": "npm run dev --prefix backend",
+    "dev:frontend": "npm run dev --prefix frontend",
+    "start": "npm run start --prefix backend",
+    "build": "npm run build --prefix frontend",
+    "install:all": "npm install --prefix backend && npm install --prefix frontend",
+    "lint": "npm run lint --prefix frontend"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}
